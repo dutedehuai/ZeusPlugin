@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+//start----------补丁相关，使用gradle插件，如果宿主是只运行于android 4.4及以上可以不添加这些代码------------------
+apply plugin: 'patch-gradle-plugin'
+//end------------补丁相关，使用gradle插件，如果宿主是只运行于android 4.4及以上可以不添加这些代码------------------
+apply plugin: 'jar-gradle-plugin'//生成jar包插件
+
+//为了可以使用public.xml来固定宿主的资源ID
+apply from: 'public-xml.gradle'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+
+
+    defaultConfig {
+        applicationId "tencent.com.chacezesuapp"
+        minSdkVersion 9
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':ZeusPlugin')
+}
+
+//start----------补丁相关，使用gradle插件，如果宿主是只运行于android 4.4及以上可以不添加这些代码------------------
+//如果enable为true则表明打出的包会在每个类的构造函数中添加如下代码:if (Boolean.FALSE.booleanValue())System.out.println(Predicate.class);
+patchPlugin{
+    enable = true
+}
+//end------------补丁相关，使用gradle插件，如果宿主是只运行于android 4.4及以上可以不添加这些代码------------------

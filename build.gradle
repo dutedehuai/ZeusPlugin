@@ -4,6 +4,10 @@ buildscript {
     repositories {
         jcenter()
         mavenCentral()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
     dependencies {
         //设置为2.0以上可能会打开instant run,那么补丁要想调试需要进行代码上的更改，具体请看PluginManager.java中的loadHotfixPluginClassLoader()
@@ -26,6 +30,10 @@ allprojects {
     repositories {
         jcenter()
         mavenCentral()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
 }
 

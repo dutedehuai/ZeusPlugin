@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/test_plugin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:onClick="testPlugin"
+        android:background="@android:color/white"
+        android:text="测试插件"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/hotfix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/test_plugin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/white"
+        android:onClick="applyHotfix"
+        android:text="应用assets/zeushotfix_test.apk补丁"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/test_hotfix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hotfix"
+        android:onClick="testHotfix"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/white"
+        android:text="测试补丁"
+        android:textColor="@android:color/black" />
+
+
+
+</RelativeLayout>

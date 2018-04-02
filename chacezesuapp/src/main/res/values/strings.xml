@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ChaceZesuApp</string>
+    <string name="string1">chace这是宿主给插件提供的字符串</string>
+</resources>
