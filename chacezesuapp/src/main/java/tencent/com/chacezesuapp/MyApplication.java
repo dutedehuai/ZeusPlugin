@@ -10,7 +10,7 @@ import zeus.plugin.ZeusBaseApplication;
  */
 
 public class MyApplication extends ZeusBaseApplication {
-    public static final String PLUGIN_TEST = "zeusplugin_test";
+    public static final String PLUGIN_TEST = "zeusplugin_chacetestplugin";
 
     @Override
     public void onCreate() {
@@ -23,7 +23,7 @@ public class MyApplication extends ZeusBaseApplication {
          */
         //补丁必须以EXP_PLUG_HOT_FIX_PREFIX开头
         //插件必须以PluginUtil.EXP_PLUG_PREFIX开头，否则不会识别为插件
-        defaultList.put(PLUGIN_TEST, 1);
+//        defaultList.put(PLUGIN_TEST, 1);
         PluginManager.init(this, defaultList);
     }
 }

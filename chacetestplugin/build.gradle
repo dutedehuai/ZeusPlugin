@@ -4,7 +4,6 @@ android {
     compileSdkVersion 23
     buildToolsVersion '23.0.2'
 
-
     defaultConfig {
         applicationId "tencent.com.chacetestplugin"
         minSdkVersion 9
@@ -13,6 +12,10 @@ android {
         versionName "1.0"
     }
 
+    //start-----插件相关-------------------
+    aaptOptions.additionalParameters '--PLUG-resoure-proguard', '--PLUG-resoure-id', '0x7d'
+    //end-------插件相关-------------------
+
     buildTypes {
         release {
             minifyEnabled false
@@ -20,11 +23,13 @@ android {
         }
     }
 
+    lintOptions {
+        abortOnError false
+    }
+
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:design:23.4.0'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':ZeusPlugin')
 }

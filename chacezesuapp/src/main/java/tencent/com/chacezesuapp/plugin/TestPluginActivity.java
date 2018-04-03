@@ -75,7 +75,8 @@ public class TestPluginActivity extends ZeusBaseActivity {
         InputStream in = null;
         try {
             AssetManager am = PluginManager.mBaseResources.getAssets();
-            in = am.open("zeusplugin_test_version2.apk");
+//            in = am.open("zeusplugin_test_version2.apk");
+            in = am.open("zeusplugin_chacetestplugin.apk");
             PluginUtil.createDirWithFile(PluginUtil.getZipPath(MyApplication.PLUGIN_TEST));
             out = new FileOutputStream(PluginUtil.getZipPath(MyApplication.PLUGIN_TEST), false);
             byte[] temp = new byte[2048];

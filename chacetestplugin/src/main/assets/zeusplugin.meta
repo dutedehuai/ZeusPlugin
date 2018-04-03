@@ -1,0 +1,8 @@
+{
+    "name": "zeusplugin_chacetestplugin",
+    "minVersion": "1",
+    "version": "1",
+    "mainClass": "tencent.com.chacetestplugin.MainActivity",
+    "otherInfo": "",
+    "flag": ""
+}
