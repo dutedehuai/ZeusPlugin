@@ -1,8 +1,10 @@
 package tencent.com.chacetestplugin;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import zeus.plugin.ZeusBaseActivity;
+
 
 public class MainActivity extends ZeusBaseActivity {
 
